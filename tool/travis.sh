@@ -33,11 +33,13 @@ if [ "$DART_BOT" = true ] ; then
   git diff --exit-code
 
   # run the tests for the plugin tool
-  (cd tool/plugin; dart test/plugin_test.dart)
+  ./gradlew buildPlugin
+  # (cd tool/plugin; dart test/plugin_test.dart)
 else
   # Run some validations on the repo code.
   ./bin/plugin lint
 
   # Run the build.
-  ./bin/plugin build --only-version=$IDEA_VERSION
+  #./bin/plugin build --only-version=$IDEA_VERSION
+  ./gradlew buildPlugin
 fi
