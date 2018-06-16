@@ -5,11 +5,6 @@ jdk:
 
 install: true
 
-branches:
-  only:
-    - master
-    - feature/support_gradle_for_development
-
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
