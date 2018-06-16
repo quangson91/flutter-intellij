@@ -13,3 +13,5 @@ pubspec.lock
 .idea/
 .vscode/
 material-design-icons/
+.gradle
+.idea
